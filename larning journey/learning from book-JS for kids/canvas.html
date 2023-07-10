@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script>
+        //drawing multiple squares
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        for (var i = 0; i < 8; i++) {
+            ctx.fillRect(i * 10, i * 10, 10, 10);
+        }
+    </script>
+    <script>
+        //changing the drawing color
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "Red";
+        ctx.fillRect(0,0,100,100);
+    </script>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "DeepPink";
+        ctx.lineWidth = 4;
+        ctx.strokeRect(100,100,100,20);
+    </script>
+    <script>
+        //drawing lines or paths 
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.strokeStyle = "Turquoise";
+        ctx.lineWidth = 4;
+        ctx.beginPath();
+        ctx.moveTo(10, 10);
+        ctx.lineTo(60, 60);
+        ctx.moveTo(60, 10);
+        ctx.lineTo(10, 60);
+        ctx.stroke();
+    </script>
+    <script>
+        //filling paths
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "skyBlue";
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(100, 60);
+        ctx.lineTo(130, 30);
+        ctx.lineTo(160, 60);
+        ctx.lineTo(160, 100);
+        ctx.lineTo(100, 100);
+        ctx.fill();
+    </script>
+</body>
+</html>

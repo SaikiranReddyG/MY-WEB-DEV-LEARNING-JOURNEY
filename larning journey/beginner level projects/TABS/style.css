@@ -1,0 +1,100 @@
+/*
+body--target the body element (<body>)
+*/
+body {
+    margin: 0; /*control the spacing around the element */
+    padding: 0; /*control the spacing between elements content and its border (inner edges)*/
+    font-family: sans-serif; 
+    background: #f5abca;
+    color: grey;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.section-centre {
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    min-width: 340px;
+    padding: 5rem 0;
+}
+
+.image {
+    margin-bottom: 2rem;
+}
+
+img {
+    border-radius: 0.5rem;
+    object-fit: cover; /*control how an image or video content is resized & fitted within its container element */
+    height: 30rem;
+}
+
+.tabs  {
+    background: #ffe5e2;
+    border-radius: 0.5rem;
+    grid-template-columns: auto 1fr;
+    /* define the columns of a grid container created with css grid , allows to specify width size and track listing of columns*/
+} 
+
+.btn.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.btn:nth-child(1) {
+    border-top-left-radius: 0.5rem;
+    /*
+    it is helpful when you want to target specific child elements within a container, reagardless of 
+    their type
+    it allows to apply different types of styles and behaviours to element based on their position within parent
+    */
+}
+
+.btn:nth-child(3) {
+    border-top-right-radius: 0.5rem;
+}
+
+.button {
+    padding: 1rem 0;
+    border: none;
+    font-size: 1rem;
+    background: #b6c9f0;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    letter-spacing: 0.25rem;
+}
+
+.button :hover:not(.live) {
+    background: #e93b81;
+    color: white;
+}
+
+.tabs-content {
+    padding: 2rem 1.5rem;
+}
+
+.content {
+    display: none;
+}
+
+.button.live {
+    background: #ffe5e2;
+}
+
+.content.live {
+    display: block;
+}
+
+@media(min-width:992px) {
+    .img {
+        margin-bottom: 0;
+    }
+    .section-centre {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+}

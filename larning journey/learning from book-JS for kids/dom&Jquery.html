@@ -1,0 +1,36 @@
+<!--
+the DOM(document object model) allows JS to access 
+the contents of a web page 
+web browsers use DOM to keep track of elements on a page
+and JS can manipulate DOM elements in various ways 
+JQUERY makes it easier to work with DOM 
+JQUERY gives us set of functions that we can use to
+choose  which element to work with and to make changes
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="main-heading">Hello world</h1>
+    <script src = "https://code.jquery.com/jquery-2.1.0.js"></script>
+    <!--this tag loads the JQUERY -->
+    <script>
+        var headingElement = document.getElementById("main-heading");
+        console.log(headingElement.innerHTML);
+        var new_heading_text = prompt('please provide a new heading');
+        $("#main-heading").text(new_heading_text);
+        /*with jquery loaded we use  the symbol $ it is called as
+        the selector string, which takes one argument, # charecter 
+        means the element with an ID of 
+        now we can modify the selected id with using text meathod
+        this passes the new text to the selected id which in this case is a prompt */
+        $("body").append("<p>This is a new paragraph</p>");
+    </script>
+    <script>$("h1").fadeOut(3000);</script>
+</body>
+</html>
